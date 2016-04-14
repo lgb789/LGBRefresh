@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		21EA2A2486978869CB973025 /* Pods_LGBRefresh_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5FAE2613424458A055EEEF /* Pods_LGBRefresh_Example.framework */; };
+		2CA04F331CBF7A5E006E36A6 /* LGBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA04F321CBF7A5E006E36A6 /* LGBHomeViewController.m */; };
+		2CA04F3A1CBF7C4E006E36A6 /* FooterRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA04F351CBF7C4E006E36A6 /* FooterRefreshView.m */; };
+		2CA04F3B1CBF7C4E006E36A6 /* HeaderRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA04F371CBF7C4E006E36A6 /* HeaderRefreshView.m */; };
+		2CA04F3C1CBF7C4E006E36A6 /* InfiniteRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA04F391CBF7C4E006E36A6 /* InfiniteRefreshView.m */; };
+		2CA04F3F1CBF7D35006E36A6 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA04F3E1CBF7D35006E36A6 /* TableView.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,6 +42,16 @@
 
 /* Begin PBXFileReference section */
 		215975CBFCD9A92BAD5CACB9 /* Pods-LGBRefresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGBRefresh_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LGBRefresh_Example/Pods-LGBRefresh_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2CA04F311CBF7A5E006E36A6 /* LGBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGBHomeViewController.h; sourceTree = "<group>"; };
+		2CA04F321CBF7A5E006E36A6 /* LGBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGBHomeViewController.m; sourceTree = "<group>"; };
+		2CA04F341CBF7C4E006E36A6 /* FooterRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterRefreshView.h; sourceTree = "<group>"; };
+		2CA04F351CBF7C4E006E36A6 /* FooterRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterRefreshView.m; sourceTree = "<group>"; };
+		2CA04F361CBF7C4E006E36A6 /* HeaderRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderRefreshView.h; sourceTree = "<group>"; };
+		2CA04F371CBF7C4E006E36A6 /* HeaderRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderRefreshView.m; sourceTree = "<group>"; };
+		2CA04F381CBF7C4E006E36A6 /* InfiniteRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteRefreshView.h; sourceTree = "<group>"; };
+		2CA04F391CBF7C4E006E36A6 /* InfiniteRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteRefreshView.m; sourceTree = "<group>"; };
+		2CA04F3D1CBF7D35006E36A6 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
+		2CA04F3E1CBF7D35006E36A6 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
 		2E6B6151ABC282B244C822CE /* Pods-LGBRefresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGBRefresh_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LGBRefresh_Tests/Pods-LGBRefresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LGBRefresh_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGBRefresh_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +145,14 @@
 		6003F593195388D20070C39A /* Example for LGBRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				2CA04F3D1CBF7D35006E36A6 /* TableView.h */,
+				2CA04F3E1CBF7D35006E36A6 /* TableView.m */,
+				2CA04F341CBF7C4E006E36A6 /* FooterRefreshView.h */,
+				2CA04F351CBF7C4E006E36A6 /* FooterRefreshView.m */,
+				2CA04F361CBF7C4E006E36A6 /* HeaderRefreshView.h */,
+				2CA04F371CBF7C4E006E36A6 /* HeaderRefreshView.m */,
+				2CA04F381CBF7C4E006E36A6 /* InfiniteRefreshView.h */,
+				2CA04F391CBF7C4E006E36A6 /* InfiniteRefreshView.m */,
 				6003F59C195388D20070C39A /* LGBAppDelegate.h */,
 				6003F59D195388D20070C39A /* LGBAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -137,6 +160,8 @@
 				6003F5A6195388D20070C39A /* LGBViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				2CA04F311CBF7A5E006E36A6 /* LGBHomeViewController.h */,
+				2CA04F321CBF7A5E006E36A6 /* LGBHomeViewController.m */,
 			);
 			name = "Example for LGBRefresh";
 			path = LGBRefresh;
@@ -391,8 +416,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LGBAppDelegate.m in Sources */,
+				2CA04F3F1CBF7D35006E36A6 /* TableView.m in Sources */,
 				6003F5A7195388D20070C39A /* LGBViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				2CA04F3A1CBF7C4E006E36A6 /* FooterRefreshView.m in Sources */,
+				2CA04F331CBF7A5E006E36A6 /* LGBHomeViewController.m in Sources */,
+				2CA04F3B1CBF7C4E006E36A6 /* HeaderRefreshView.m in Sources */,
+				2CA04F3C1CBF7C4E006E36A6 /* InfiniteRefreshView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,9 +546,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LGBRefresh/LGBRefresh-Prefix.pch";
 				INFOPLIST_FILE = "LGBRefresh/LGBRefresh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -532,9 +564,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LGBRefresh/LGBRefresh-Prefix.pch";
 				INFOPLIST_FILE = "LGBRefresh/LGBRefresh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
