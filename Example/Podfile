@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'LGBRefresh_Example', :exclusive => true do
+  pod 'LGBRefresh', :path => '../'
+end
+
+target 'LGBRefresh_Tests', :exclusive => true do
+  pod 'LGBRefresh', :path => '../'
+
+  
+end
