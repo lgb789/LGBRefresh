@@ -122,7 +122,9 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
 -(UIImageView *)imgView
 {
     if (_imgView == nil) {
-        _imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"]];
+        NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"LGBRefresh" ofType:@"bundle"];
+        NSString *imageName = [path stringByAppendingPathComponent:@"arrow.png"];
+        _imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
     }
     return _imgView;
 }
