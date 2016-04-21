@@ -8,6 +8,8 @@
 
 #import "FooterRefreshView.h"
 
+static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
+
 @interface FooterRefreshView ()
 @property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -24,7 +26,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        self.backgroundColor = [UIColor redColor];
         [self addSubview:self.imgView];
         [self addSubview:self.titleLabel];
         [self addSubview:self.subTitleLabel];
@@ -62,7 +63,7 @@
     self.indicatorView.alpha = 0;
     [self.indicatorView stopAnimating];
     self.titleLabel.text = @"上拉可以刷新";
-    self.subTitleLabel.text = @"最后更新:今天 11:11";
+    self.subTitleLabel.text = [NSString stringWithFormat:@"最后更新:  %@", [self lastUpdateTime]];
 }
 
 -(void)refreshViewWillRefresh
@@ -88,20 +89,40 @@
     }];
 }
 
--(void)refreshViewContentOffset:(CGFloat)offset directionUp:(BOOL)up
-{
-    
-}
-
 #pragma mark - *********************** event response ***********************
 
 #pragma mark - *********************** private methods ***********************
+-(NSString *)lastUpdateTime
+{
+    
+    NSDate *lastDate = [[NSUserDefaults standardUserDefaults] objectForKey:kLastUpdateTimeKey];
+    if (lastDate == nil) {
+        return @"无纪录";
+    }
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
+    NSDateComponents *lastComponents = [calendar components:unit fromDate:lastDate];
+    NSDateComponents *currentComponents = [calendar components:unit fromDate:[NSDate date]];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    if (lastComponents.day == currentComponents.day) {
+        formatter.dateFormat = @"今天  HH:mm";
+    }else if (lastComponents.year == currentComponents.year){
+        formatter.dateFormat = @"MM-dd HH:mm";
+    }else {
+        formatter.dateFormat = @"yyyy-MM-dd HH:mm";
+    }
+    
+    return [formatter stringFromDate:lastDate];
+}
 
 #pragma mark - *********************** getters and setters ***********************
 -(UIImageView *)imgView
 {
     if (_imgView == nil) {
-        _imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow"]];
+        _imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"]];
     }
     return _imgView;
 }

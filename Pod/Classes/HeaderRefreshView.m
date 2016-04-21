@@ -26,7 +26,6 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        self.backgroundColor = [UIColor redColor];
         [self addSubview:self.imgView];
         [self addSubview:self.titleLabel];
         [self addSubview:self.subTitleLabel];
@@ -34,7 +33,6 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
     }
     return self;
 }
-
 
 -(void)layoutSubviews
 {
@@ -55,7 +53,6 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
 
 -(void)refreshViewNormal
 {
-    
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         self.imgView.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
@@ -63,7 +60,6 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
         
     }];
     self.imgView.alpha = 1;
-//    self.indicatorView.alpha = 0;
     [self.indicatorView stopAnimating];
     self.titleLabel.text = @"下拉可以刷新";
     self.subTitleLabel.text = [NSString stringWithFormat:@"最后更新:  %@", [self lastUpdateTime]];
@@ -71,7 +67,6 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
 
 -(void)refreshViewWillRefresh
 {
-    
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         self.imgView.transform = CGAffineTransformMakeRotation(M_PI);
     } completion:^(BOOL finished) {
@@ -82,22 +77,15 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
 
 -(void)refreshViewRefreshing
 {
-    
     [self.indicatorView startAnimating];
     self.imgView.alpha = 0;
     self.titleLabel.text = @"正在刷新数据....";
-//    self.indicatorView.alpha = 1;
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         
     } completion:^(BOOL finished) {
         
     }];
     [self saveCurrentTime];
-}
-
--(void)refreshViewContentOffset:(CGFloat)offset directionUp:(BOOL)up
-{
-
 }
 
 #pragma mark - *********************** event response ***********************
@@ -139,7 +127,9 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
 -(UIImageView *)imgView
 {
     if (_imgView == nil) {
-        _imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow"]];
+        NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"LGBRefresh" ofType:@"bundle"];
+        NSString *imageName = [path stringByAppendingPathComponent:@"arrow.png"];
+        _imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
     }
     return _imgView;
 }

@@ -22,7 +22,6 @@ typedef enum : NSUInteger {
 } LGBRefreshViewState;
 
 @interface LGBRefreshManager ()
-@property (nonatomic, assign) CGFloat originOffsetY;
 @property (nonatomic, assign) BOOL firstLoad;
 
 @property (nonatomic, assign) LGBRefreshViewState refreshState;
@@ -64,14 +63,21 @@ typedef enum : NSUInteger {
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-
+    self.originInsets = self.scrollView.contentInset;
+    
+    if (self.position == RefreshPositionBottom || self.position == RefreshPositionInfinite) {
+        UIView *view = (UIView *)self.delegate;
+        if (CGRectGetHeight(self.scrollView.bounds) - self.scrollView.contentSize.height > self.originInsets.top) {
+            view.hidden = YES;
+        }else{
+            view.hidden = NO;
+        }
+    }
+    
     if (!self.firstLoad) {
         self.firstLoad = YES;
         
         [self.scrollView bringSubviewToFront:self];
-        
-        self.originOffsetY = self.scrollView.contentOffset.y;
-        self.originInsets = self.scrollView.contentInset;
         
         self.refreshState = LGBRefreshViewStateNormal;
         
@@ -141,11 +147,11 @@ typedef enum : NSUInteger {
     
     CGFloat newOffsetY = contentOffset.y;
     
-    if (newOffsetY >= self.originOffsetY && self.position == RefreshPositionTop) {
+    if (newOffsetY + self.originInsets.top >= 0 && self.position == RefreshPositionTop) {
         return;
     }
     
-    if (newOffsetY <= self.originOffsetY && (self.position == RefreshPositionBottom || self.position == RefreshPositionInfinite)) {
+    if (newOffsetY + self.originInsets.top <= 0 && (self.position == RefreshPositionBottom || self.position == RefreshPositionInfinite)) {
         return;
     }
     
@@ -155,19 +161,16 @@ typedef enum : NSUInteger {
     CGFloat refreshHeight = [self.delegate refreshViewHeight];
     CGFloat offset = self.scrollView.contentSize.height - CGRectGetHeight(self.scrollView.bounds);
     
+    
     if (self.position == RefreshPositionInfinite || self.position == RefreshPositionBottom) {
         UIView *view = (UIView *)self.delegate;
-        if (offset < 0) {
-            view.hidden = YES;
+        if (view.hidden == YES) {
             return;
-        }else{
-            view.hidden = NO;
         }
     }
     
     if (self.position == RefreshPositionInfinite) {
-        
-        if (newOffsetY > MAX(offset, 0)) {
+        if (newOffsetY > offset) {
             self.refreshState = LGBRefreshViewStateRefreshing;
         }
         return;
@@ -175,16 +178,11 @@ typedef enum : NSUInteger {
     
     if (self.position == RefreshPositionBottom) {
 
-        if(newOffsetY < MAX(offset, 0)){
+        if(newOffsetY < offset){
             return;
         }else{
-            y = fabs(newOffsetY - MAX(offset, 0));
-            
-            if (offset <= 0) {
-                bottom = refreshHeight + fabs(offset);
-            }else{
-                bottom = MIN(y, refreshHeight);
-            }
+            y = newOffsetY - offset;
+            bottom = MIN(y, refreshHeight);
             
             if (y > self.lastOffset) {
                 self.directionUp = YES;
@@ -194,7 +192,7 @@ typedef enum : NSUInteger {
             self.lastOffset = y;
         }
     }else if(self.position == RefreshPositionTop) {
-        y = fabs(newOffsetY - self.originOffsetY);
+        y = fabs(newOffsetY + self.originInsets.top);
         top = MIN(y, refreshHeight);
         
         if (y > self.lastOffset) {
@@ -234,7 +232,7 @@ typedef enum : NSUInteger {
 
 -(void)scrollViewDidChangeContentSize:(CGSize)size
 {
-    self.frame = CGRectMake(0, 0, size.width, MAX(size.height, CGRectGetHeight(self.scrollView.bounds)));
+    self.frame = CGRectMake(0, 0, size.width, size.height);
 }
 
 -(void)resetScrollInsetsForPosition:(RefreshPosition)position
@@ -242,9 +240,9 @@ typedef enum : NSUInteger {
     UIEdgeInsets insets = self.scrollView.contentInset;
     
     if (position == RefreshPositionTop) {
-        insets = UIEdgeInsetsMake(self.originInsets.top, insets.left, insets.bottom, insets.right);
+        insets.top = self.originInsets.top;
     }else if (position == RefreshPositionBottom){
-        insets = UIEdgeInsetsMake(insets.top, insets.left, self.originInsets.bottom, insets.right);
+        insets.bottom = self.originInsets.bottom;
     }
     
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{

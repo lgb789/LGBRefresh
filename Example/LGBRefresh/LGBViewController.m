@@ -9,9 +9,7 @@
 #import "LGBViewController.h"
 #import "TableView.h"
 #import "LGBRefresh.h"
-#import "HeaderRefreshView.h"
-#import "FooterRefreshView.h"
-#import "InfiniteRefreshView.h"
+
 
 @interface LGBViewController ()
 @property (nonatomic, strong) TableView *tableView;

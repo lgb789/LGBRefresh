@@ -25,7 +25,6 @@
     if (self) {
         [self addSubview:self.indicatorView];
         [self addSubview:self.titleLabel];
-//        self.backgroundColor = [UIColor greenColor];
     }
     return self;
 }

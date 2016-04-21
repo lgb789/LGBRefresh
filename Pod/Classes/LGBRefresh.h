@@ -11,5 +11,8 @@
 
 #import "UIScrollView+lgb_refresh.h"
 #import "LGBRefreshManager.h"
+#import "HeaderRefreshView.h"
+#import "FooterRefreshView.h"
+#import "InfiniteRefreshView.h"
 
 #endif /* LGBRefresh_h */
