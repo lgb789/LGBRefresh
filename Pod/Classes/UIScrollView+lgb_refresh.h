@@ -8,20 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LGBRefreshManagerDelegate;
+
 @interface UIScrollView (lgb_refresh)
 
--(void)lgb_addHeaderRefreshViewClass:(Class)viewClass
-                              action:(void (^)(void))action;
+-(void)lgb_addHeaderRefreshView:(UIView<LGBRefreshManagerDelegate> *)refreshView
+                         action:(void (^)(void))action;
 
 -(void)lgb_endHeaderRefresh;
 
--(void)lgb_addFooterRefreshViewClass:(Class)viewClass
-                              action:(void (^)(void))action;
+-(void)lgb_addFooterRefreshView:(UIView<LGBRefreshManagerDelegate> *)refreshView
+                         action:(void (^)(void))action;
 
 -(void)lgb_endFooterRefresh;
 
--(void)lgb_addInfiniteRefreshViewClass:(Class)viewClass
-                                action:(void (^)(void))action;
+-(void)lgb_addInfiniteRefreshView:(UIView<LGBRefreshManagerDelegate> *)refreshView
+                           action:(void (^)(void))action;
 
 -(void)lgb_endInfiniteRefresh;
 
