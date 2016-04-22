@@ -1,6 +1,6 @@
 {
   "name": "LGBRefresh",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "summary": "A simple Refresh.",
   "description": "A wrapper of a simple scroll view refresh",
   "homepage": "https://github.com/lgb789/LGBRefresh",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/lgb789/LGBRefresh.git",
-    "tag": "0.1.1"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "6.0"

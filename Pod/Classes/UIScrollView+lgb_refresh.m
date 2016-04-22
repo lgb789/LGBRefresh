@@ -69,8 +69,7 @@ static char kInfiniteRefreshManagerKey;
                    action:(void (^)(void))action
                  position:(RefreshPosition)position
 {
-    Class viewClass = [refreshView class];
-    NSAssert([viewClass conformsToProtocol:@protocol(LGBRefreshManagerDelegate)], ([NSString stringWithFormat:@"\n**************************\n%@ 必须实现 LGBRefreshManagerDelegate 协议\n**************************\n", NSStringFromClass(viewClass)]));
+    NSAssert([[refreshView class] conformsToProtocol:@protocol(LGBRefreshManagerDelegate)], ([NSString stringWithFormat:@"\n**************************\n%@ 必须实现 LGBRefreshManagerDelegate 协议\n**************************\n", NSStringFromClass([refreshView class])]));
     
     void *key = nil;
     if (position == RefreshPositionTop) {

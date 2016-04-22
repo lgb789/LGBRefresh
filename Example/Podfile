@@ -1,6 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
+xcodeproj 'LGBRefresh.xcodeproj'
+
 target 'LGBRefresh_Example', :exclusive => true do
   pod 'LGBRefresh', :path => '../'
 end
