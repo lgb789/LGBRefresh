@@ -22,16 +22,32 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
 #pragma mark - *********************** public methods ***********************
 
 #pragma mark - *********************** overwrite methods ***********************
+
+-(instancetype)initWithDateKey:(NSString *)dateKey
+{
+    self = [super init];
+    if (self) {
+        self.dateKey = dateKey;
+    }
+    return self;
+}
+
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addSubview:self.imgView];
-        [self addSubview:self.titleLabel];
-        [self addSubview:self.subTitleLabel];
-        [self addSubview:self.indicatorView];
+        self.dateKey = kLastUpdateTimeKey;
+        [self setupViews];
     }
     return self;
+}
+
+-(void)setupViews
+{
+    [self addSubview:self.imgView];
+    [self addSubview:self.titleLabel];
+    [self addSubview:self.subTitleLabel];
+    [self addSubview:self.indicatorView];
 }
 
 -(void)layoutSubviews
@@ -62,7 +78,7 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
     self.imgView.alpha = 1;
     [self.indicatorView stopAnimating];
     self.titleLabel.text = @"下拉可以刷新";
-    self.subTitleLabel.text = [NSString stringWithFormat:@"最后更新:  %@", [self lastUpdateTime]];
+    self.subTitleLabel.text = [NSString stringWithFormat:@"上次更新:  %@", [self lastUpdateTime]];
 }
 
 -(void)refreshViewWillRefresh
@@ -93,8 +109,7 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
 #pragma mark - *********************** private methods ***********************
 -(NSString *)lastUpdateTime
 {
-    
-    NSDate *lastDate = [[NSUserDefaults standardUserDefaults] objectForKey:kLastUpdateTimeKey];
+    NSDate *lastDate = [[NSUserDefaults standardUserDefaults] objectForKey:self.dateKey];
     if (lastDate == nil) {
         return @"无纪录";
     }
@@ -106,12 +121,12 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     
-    if (lastComponents.day == currentComponents.day) {
+    if (lastComponents.year == currentComponents.year && lastComponents.month == currentComponents.month && lastComponents.day == currentComponents.day) {
         formatter.dateFormat = @"今天  HH:mm";
     }else if (lastComponents.year == currentComponents.year){
-        formatter.dateFormat = @"MM-dd HH:mm";
+        formatter.dateFormat = @"MM月dd日 HH:mm";
     }else {
-        formatter.dateFormat = @"yyyy-MM-dd HH:mm";
+        formatter.dateFormat = @"yyyy年MM月dd日 HH:mm";
     }
     
     return [formatter stringFromDate:lastDate];
@@ -119,7 +134,7 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
 
 -(void)saveCurrentTime
 {
-    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kLastUpdateTimeKey];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:self.dateKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

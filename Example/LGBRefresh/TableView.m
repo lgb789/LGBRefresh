@@ -19,7 +19,7 @@
 
 -(void)configData
 {
-    self.rows += 2;
+    self.rows += 5;
     [self.tableView reloadData];
 }
 

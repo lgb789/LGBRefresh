@@ -10,4 +10,8 @@
 
 @interface HeaderRefreshView : UIView <LGBRefreshManagerDelegate>
 
+@property (nonatomic, copy) NSString *dateKey;
+
+-(instancetype)initWithDateKey:(NSString *)dateKey;
+
 @end

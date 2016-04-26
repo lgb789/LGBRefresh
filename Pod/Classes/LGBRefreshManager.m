@@ -112,6 +112,7 @@ typedef enum : NSUInteger {
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.userInteractionEnabled = NO;
         self.refreshState = LGBRefreshViewStateUnknown;
     }
     return self;
