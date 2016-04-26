@@ -1,5 +1,5 @@
 PODS:
-  - LGBRefresh (0.1.4)
+  - LGBRefresh (0.1.5)
 
 DEPENDENCIES:
   - LGBRefresh (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LGBRefresh: 20d733a51b292e4d97af7323c75d342277bbdc5b
+  LGBRefresh: 687b2d4137e500833a793ef48aa63a80ba37b251
 
 COCOAPODS: 0.39.0

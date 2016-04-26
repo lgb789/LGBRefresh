@@ -27,7 +27,7 @@
     self.tableView.frame = self.view.bounds;
     
     __weak typeof(self) weakSelf = self;
-    [self.tableView.tableView lgb_addHeaderRefreshView:[HeaderRefreshView new] action:^{
+    [self.tableView.tableView lgb_addHeaderRefreshView:[[HeaderRefreshView alloc] initWithDateKey:@"header_key"] action:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf.tableView configData];
             
@@ -36,7 +36,7 @@
         
         
     }];
-    
+#if 0
     [self.tableView.tableView lgb_addInfiniteRefreshView:[InfiniteRefreshView new] action:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf.tableView configData];
@@ -46,6 +46,17 @@
         
         
     }];
+#else
+    [self.tableView.tableView lgb_addFooterRefreshView:[[FooterRefreshView alloc] initWithDateKey:@"footer_key"] action:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.tableView configData];
+            
+            [weakSelf.tableView.tableView lgb_endFooterRefresh];
+        });
+        
+        
+    }];
+#endif
     
     [self.tableView.tableView lgb_startHeaderRefresh];
 }

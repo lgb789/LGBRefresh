@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0E9CFA6966E7920583803402'
+               BlueprintIdentifier = '5777161B3233F168B67887A0'
                BlueprintName = 'LGBRefresh'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'LGBRefresh.framework'>
