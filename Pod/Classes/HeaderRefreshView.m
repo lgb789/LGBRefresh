@@ -144,7 +144,9 @@ static NSString * const kLastUpdateTimeKey = @"kLastUpdateTimeKey";
     if (_imgView == nil) {
         NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"LGBRefresh" ofType:@"bundle"];
         NSString *imageName = [path stringByAppendingPathComponent:@"arrow.png"];
-        _imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+        
+        _imgView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:imageName]];
+        
     }
     return _imgView;
 }

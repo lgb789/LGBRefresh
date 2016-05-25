@@ -91,6 +91,8 @@ typedef enum : NSUInteger {
             [self.scrollView setContentOffset:CGPointMake(0, -[self.delegate refreshViewHeight] * 2)];
         }
     }
+    
+    [super layoutSubviews];
 }
 
 -(void)willMoveToSuperview:(UIView *)newSuperview
