@@ -32,6 +32,8 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, assign) BOOL startTopRefreshFlag;
 
+@property (nonatomic, assign) CGPoint initialOffset;
+
 @end
 
 @implementation LGBRefreshManager
@@ -67,7 +69,8 @@ typedef enum : NSUInteger {
     
     if (self.position == RefreshPositionBottom || self.position == RefreshPositionInfinite) {
         UIView *view = (UIView *)self.delegate;
-        if (CGRectGetHeight(self.scrollView.bounds) - self.scrollView.contentSize.height > self.originInsets.top) {
+//        NSLog(@"height:%lf, %lf, %lf", CGRectGetHeight(self.scrollView.bounds), self.scrollView.contentSize.height, self.initialOffset.y);
+        if (CGRectGetHeight(self.scrollView.bounds) - self.scrollView.contentSize.height - fabs(self.initialOffset.y) > 0) {
             view.hidden = YES;
         }else{
             view.hidden = NO;
@@ -99,7 +102,7 @@ typedef enum : NSUInteger {
 {
     [super willMoveToSuperview:newSuperview];
     if (self.superview == nil && newSuperview && [newSuperview isKindOfClass:[UIScrollView class]]) {
-        [newSuperview addObserver:self forKeyPath:kContentOffsetKey options:NSKeyValueObservingOptionNew context:nil];
+        [newSuperview addObserver:self forKeyPath:kContentOffsetKey options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
         [newSuperview addObserver:self forKeyPath:kContentSizeKey options:NSKeyValueObservingOptionNew context:nil];
         
     }
@@ -115,6 +118,7 @@ typedef enum : NSUInteger {
     self = [super initWithFrame:frame];
     if (self) {
         self.userInteractionEnabled = NO;
+//        self.backgroundColor = [UIColor grayColor];
         self.refreshState = LGBRefreshViewStateUnknown;
     }
     return self;
@@ -128,6 +132,9 @@ typedef enum : NSUInteger {
 {
     if (keyPath == kContentOffsetKey) {
         CGPoint offset = [change[NSKeyValueChangeNewKey] CGPointValue];
+        if (!self.firstLoad) {
+            self.initialOffset = [change[NSKeyValueChangeOldKey] CGPointValue];
+        }
         [self scrollViewDidChangeContentOffset:offset];
     }else if (keyPath == kContentSizeKey){
         CGSize size = [change[NSKeyValueChangeNewKey] CGSizeValue];
@@ -195,7 +202,7 @@ typedef enum : NSUInteger {
             self.lastOffset = y;
         }
     }else if(self.position == RefreshPositionTop) {
-        y = fabs(newOffsetY + self.originInsets.top);
+        y = fabs(newOffsetY - self.initialOffset.y);
         top = MIN(y, refreshHeight);
         
         if (y > self.lastOffset) {
@@ -223,8 +230,8 @@ typedef enum : NSUInteger {
     }else if (self.refreshState == LGBRefreshViewStateWillRefresh){
         
         self.refreshState = LGBRefreshViewStateRefreshing;
-        
-        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+//        NSLog(@"deceleration:%lf, %lf", self.scrollView.decelerationRate, y);
+        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
             self.scrollView.contentInset = UIEdgeInsetsMake(top + self.originInsets.top, self.originInsets.left, bottom + self.originInsets.bottom, self.originInsets.right);
         } completion:^(BOOL finished) {
             
@@ -235,7 +242,9 @@ typedef enum : NSUInteger {
 
 -(void)scrollViewDidChangeContentSize:(CGSize)size
 {
-    self.frame = CGRectMake(0, 0, size.width, size.height);
+    CGRect rect = self.frame;
+    self.frame = CGRectMake(rect.origin.x, rect.origin.y, size.width, size.height);
+//    NSLog(@"frame:%@", NSStringFromCGRect(self.frame));
 }
 
 -(void)resetScrollInsetsForPosition:(RefreshPosition)position
@@ -248,7 +257,7 @@ typedef enum : NSUInteger {
         insets.bottom = self.originInsets.bottom;
     }
     
-    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.scrollView.contentInset = insets;
     } completion:^(BOOL finished) {
         self.refreshState = LGBRefreshViewStateNormal;

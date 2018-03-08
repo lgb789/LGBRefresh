@@ -1,0 +1,845 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C4B75F0C26DBBE3FFB18FA650CD2D3 /* LGBRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 560BA5E294FBDEF99358D954993E818D /* LGBRefresh-dummy.m */; };
+		428E44A9B78FAB21DEBDE41B00F9C253 /* FooterRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD136247241CD192EADC2843823A6F2 /* FooterRefreshView.m */; };
+		572CF4951E3327348AAAF5F07F8BBF10 /* LGBRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = C0CBA70804BCA8644771C6715138B163 /* LGBRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D012A89933CB4ECF0C10E726C59CA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		6D0D5014605EB125541CE5CD706712FD /* UIScrollView+lgb_refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = B774F8E0ECDC410D21C7D608BE4BEF5F /* UIScrollView+lgb_refresh.m */; };
+		818E41ACC33E477237D6A6CBCE9AB8F1 /* Pods-LGBRefresh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AFA8EB36955CE4B3F10474A6F8965DB2 /* Pods-LGBRefresh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87C03A1DF20BCE4826861B8E24BDFD5C /* LGBRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 82C0331F8617DFB56010A9E393892510 /* LGBRefresh.bundle */; };
+		90B3A479B57C4F92658581734F92BACF /* LGBRefreshManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAEC4662AFD6133420D029C2FB9505 /* LGBRefreshManager.m */; };
+		9D036204D0C78620FA90F433FE9EDBEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		A31A0BE1F993D788A146EA5CE1CD607E /* FooterRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = EB943846F08CF066E26DF55374876C77 /* FooterRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9266BED997430A9E8D4E9FA50F02879 /* LGBRefreshManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 56669EBEF4E158B0597BEBA50E6696E7 /* LGBRefreshManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1954CDDCCEC9FBDAC3C648F27AAEAD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B27F5DF7DD85028D798D20AC3469FDEA /* InfiniteRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A6952EA8CE2A5112ABBD60EBC1941C /* InfiniteRefreshView.m */; };
+		B3A71EC25AF887A97A444A15DD23A28D /* UIScrollView+lgb_refresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B4508B149A4AB88AA6A3A50B0AFA83D /* UIScrollView+lgb_refresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B501833C372DED332B95CF79C70999EC /* Pods-LGBRefresh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9D546D03B50F44C99925765BB53639 /* Pods-LGBRefresh_Example-dummy.m */; };
+		D696DC16FA8C626531B914B96E198624 /* Pods-LGBRefresh_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A4C094BD9E6566488A2FFDB63D52F9 /* Pods-LGBRefresh_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE66DDA8677982EA31A58D18675E398F /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C647289127830E0347E163A9DAC90D51 /* arrow@2x.png */; };
+		EA9C2729952B3B5F9BB511DB42E4EF64 /* Pods-LGBRefresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC0E2DEC4D03374FCCABDFDD8AC9F8 /* Pods-LGBRefresh_Tests-dummy.m */; };
+		EBC9DB474CC811B776B868D26AD0F4A9 /* HeaderRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = D99A781661B94744ED814812B2F3665C /* HeaderRefreshView.m */; };
+		F346B6C1D751EC884068661B66AD006D /* InfiniteRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EBBAABD6DA032084A13446BB808C45 /* InfiniteRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8A5DAF7B77900A3AB4058F25B5ADC03 /* HeaderRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA449CFFD4E15F480560C994E5C573F /* HeaderRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA8EEC32B654BA4DA2524EFE0F96B6C6 /* LGBRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA5A6FF63E8CBBC2472E1EEF4CE902F1 /* LGBRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFC30CD92AB6839D8A19518E61507236 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF587B611BE8C3B2220CDF2D66F8AA85;
+			remoteInfo = "LGBRefresh-LGBRefresh";
+		};
+		EF1DADB291E227B9AA380AB786428A75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3489778BCFD8853A3E6D1C2DD17F638A;
+			remoteInfo = LGBRefresh;
+		};
+		EFA45081AF3C43E9604792D2EF798E1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3489778BCFD8853A3E6D1C2DD17F638A;
+			remoteInfo = LGBRefresh;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01728BD97DF4DBC64A1019A80F26AEDF /* Pods_LGBRefresh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LGBRefresh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0326A5725F491FCA9F4ADC5F0D2C7432 /* Pods-LGBRefresh_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LGBRefresh_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		2983D5F5518D6493C23363AAE3272DEA /* LGBRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LGBRefresh.xcconfig; sourceTree = "<group>"; };
+		3140E672433A24F8DB99302405FF2E03 /* Pods-LGBRefresh_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LGBRefresh_Example-resources.sh"; sourceTree = "<group>"; };
+		358FCCDD296E0A50CB58D3D6AF1685FA /* Pods_LGBRefresh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LGBRefresh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39272C2BC574F9F0A9742519AC881935 /* Pods-LGBRefresh_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LGBRefresh_Example-frameworks.sh"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		430184CA0728D90A83905E0DBE56E5B2 /* Pods-LGBRefresh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LGBRefresh_Tests.modulemap"; sourceTree = "<group>"; };
+		503E0980FF4A1AB1DF5780E55648CC99 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560BA5E294FBDEF99358D954993E818D /* LGBRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LGBRefresh-dummy.m"; sourceTree = "<group>"; };
+		56669EBEF4E158B0597BEBA50E6696E7 /* LGBRefreshManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LGBRefreshManager.h; sourceTree = "<group>"; };
+		59A6952EA8CE2A5112ABBD60EBC1941C /* InfiniteRefreshView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InfiniteRefreshView.m; sourceTree = "<group>"; };
+		59AC0E2DEC4D03374FCCABDFDD8AC9F8 /* Pods-LGBRefresh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LGBRefresh_Tests-dummy.m"; sourceTree = "<group>"; };
+		5B4508B149A4AB88AA6A3A50B0AFA83D /* UIScrollView+lgb_refresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+lgb_refresh.h"; sourceTree = "<group>"; };
+		5D198FD85F9038CA0E40A28260F90776 /* Pods-LGBRefresh_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LGBRefresh_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5FBEC8B2443871B5C185D55555E0E86D /* Pods-LGBRefresh_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LGBRefresh_Tests-resources.sh"; sourceTree = "<group>"; };
+		60EBBAABD6DA032084A13446BB808C45 /* InfiniteRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InfiniteRefreshView.h; sourceTree = "<group>"; };
+		622003A7578548D0664E7C3F830EAEBF /* LGBRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LGBRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A6FF0D108E16C9226CD6602865BD27F /* Pods-LGBRefresh_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LGBRefresh_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		82C0331F8617DFB56010A9E393892510 /* LGBRefresh.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LGBRefresh.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BBAEC4662AFD6133420D029C2FB9505 /* LGBRefreshManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LGBRefreshManager.m; sourceTree = "<group>"; };
+		9642482096CB38AD046E99C2E5ECC3D9 /* Pods-LGBRefresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LGBRefresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		985D754837CEEA4938E590A72FBEFAE1 /* Pods-LGBRefresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LGBRefresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		98A68343C3F9087D7219743817DC062E /* Pods-LGBRefresh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LGBRefresh_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9D8AD932B56B523C6177D440928321BB /* LGBRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LGBRefresh.modulemap; sourceTree = "<group>"; };
+		AFA8EB36955CE4B3F10474A6F8965DB2 /* Pods-LGBRefresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LGBRefresh_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B774F8E0ECDC410D21C7D608BE4BEF5F /* UIScrollView+lgb_refresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+lgb_refresh.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BBDEF54952E2C446CBFDF25D97A91448 /* Pods-LGBRefresh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LGBRefresh_Example.modulemap"; sourceTree = "<group>"; };
+		BC7839B5468737A2AB38C50BEDD4D0F7 /* Pods-LGBRefresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LGBRefresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0CBA70804BCA8644771C6715138B163 /* LGBRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LGBRefresh.h; sourceTree = "<group>"; };
+		C5A4C094BD9E6566488A2FFDB63D52F9 /* Pods-LGBRefresh_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LGBRefresh_Example-umbrella.h"; sourceTree = "<group>"; };
+		C647289127830E0347E163A9DAC90D51 /* arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		CA5A6FF63E8CBBC2472E1EEF4CE902F1 /* LGBRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGBRefresh-umbrella.h"; sourceTree = "<group>"; };
+		CB51B04E9D29CBA16123F943293AB902 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D99A781661B94744ED814812B2F3665C /* HeaderRefreshView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HeaderRefreshView.m; sourceTree = "<group>"; };
+		DCADB71E3286314AB3BD76F0F0BF7A55 /* Pods-LGBRefresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LGBRefresh_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E1F0DE8C9A39B796E0FE937F61846CA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4C339C4017F4D02963B2EE66A0845B6 /* LGBRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGBRefresh-prefix.pch"; sourceTree = "<group>"; };
+		EA9D546D03B50F44C99925765BB53639 /* Pods-LGBRefresh_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LGBRefresh_Example-dummy.m"; sourceTree = "<group>"; };
+		EB943846F08CF066E26DF55374876C77 /* FooterRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FooterRefreshView.h; sourceTree = "<group>"; };
+		F0524046DE5883E76E2E204D37D9B775 /* Pods-LGBRefresh_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LGBRefresh_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FBD136247241CD192EADC2843823A6F2 /* FooterRefreshView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FooterRefreshView.m; sourceTree = "<group>"; };
+		FFA449CFFD4E15F480560C994E5C573F /* HeaderRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HeaderRefreshView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E913A5A87AE2C6609FC88DF971E2887 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808F1D245CE264526BF9DDB5769DEB19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57D012A89933CB4ECF0C10E726C59CA5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F1B1E83CD5FCE76935F6A6261276E0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1954CDDCCEC9FBDAC3C648F27AAEAD8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA8DF54FA5F02B1DF62E885AAADFEE6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D036204D0C78620FA90F433FE9EDBEC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14200C65DA4A6400F85FAF9CB2AAC9F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82C0331F8617DFB56010A9E393892510 /* LGBRefresh.bundle */,
+				622003A7578548D0664E7C3F830EAEBF /* LGBRefresh.framework */,
+				358FCCDD296E0A50CB58D3D6AF1685FA /* Pods_LGBRefresh_Example.framework */,
+				01728BD97DF4DBC64A1019A80F26AEDF /* Pods_LGBRefresh_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C49EC38C58641ABCEA1580992BCBC0C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A97E03B2A3E006A374CCFC00B683D562 /* Assets */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		2D13BE4A62E6C3547A0E0F2B57667596 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C49EC38C58641ABCEA1580992BCBC0C /* Pod */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5241F996734C175871EB44F3D0C9124D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F74072EE1D66F03264F22339913229EE /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				C3C33B9ED295A040C1789CB6A7294119 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				14200C65DA4A6400F85FAF9CB2AAC9F4 /* Products */,
+				94CD7812EA0C5D783F9928203638771C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		803AD123A9775C852DE33B83114D4693 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB51B04E9D29CBA16123F943293AB902 /* Info.plist */,
+				9D8AD932B56B523C6177D440928321BB /* LGBRefresh.modulemap */,
+				2983D5F5518D6493C23363AAE3272DEA /* LGBRefresh.xcconfig */,
+				560BA5E294FBDEF99358D954993E818D /* LGBRefresh-dummy.m */,
+				E4C339C4017F4D02963B2EE66A0845B6 /* LGBRefresh-prefix.pch */,
+				CA5A6FF63E8CBBC2472E1EEF4CE902F1 /* LGBRefresh-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LGBRefresh";
+			sourceTree = "<group>";
+		};
+		8C2D5653435864788BCBA1D675C0C2C3 /* LGBRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				5241F996734C175871EB44F3D0C9124D /* Pod */,
+				2D13BE4A62E6C3547A0E0F2B57667596 /* Resources */,
+				803AD123A9775C852DE33B83114D4693 /* Support Files */,
+			);
+			name = LGBRefresh;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		8F9ABB2B1BFDF0D93212101B73A13A2E /* Pods-LGBRefresh_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E1F0DE8C9A39B796E0FE937F61846CA9 /* Info.plist */,
+				430184CA0728D90A83905E0DBE56E5B2 /* Pods-LGBRefresh_Tests.modulemap */,
+				985D754837CEEA4938E590A72FBEFAE1 /* Pods-LGBRefresh_Tests-acknowledgements.markdown */,
+				5D198FD85F9038CA0E40A28260F90776 /* Pods-LGBRefresh_Tests-acknowledgements.plist */,
+				59AC0E2DEC4D03374FCCABDFDD8AC9F8 /* Pods-LGBRefresh_Tests-dummy.m */,
+				0326A5725F491FCA9F4ADC5F0D2C7432 /* Pods-LGBRefresh_Tests-frameworks.sh */,
+				5FBEC8B2443871B5C185D55555E0E86D /* Pods-LGBRefresh_Tests-resources.sh */,
+				AFA8EB36955CE4B3F10474A6F8965DB2 /* Pods-LGBRefresh_Tests-umbrella.h */,
+				BC7839B5468737A2AB38C50BEDD4D0F7 /* Pods-LGBRefresh_Tests.debug.xcconfig */,
+				9642482096CB38AD046E99C2E5ECC3D9 /* Pods-LGBRefresh_Tests.release.xcconfig */,
+			);
+			name = "Pods-LGBRefresh_Tests";
+			path = "Target Support Files/Pods-LGBRefresh_Tests";
+			sourceTree = "<group>";
+		};
+		94CD7812EA0C5D783F9928203638771C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA3304578AE2A9CFF5CE024D3093EBDC /* Pods-LGBRefresh_Example */,
+				8F9ABB2B1BFDF0D93212101B73A13A2E /* Pods-LGBRefresh_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A97E03B2A3E006A374CCFC00B683D562 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C647289127830E0347E163A9DAC90D51 /* arrow@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C3C33B9ED295A040C1789CB6A7294119 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C2D5653435864788BCBA1D675C0C2C3 /* LGBRefresh */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F74072EE1D66F03264F22339913229EE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB943846F08CF066E26DF55374876C77 /* FooterRefreshView.h */,
+				FBD136247241CD192EADC2843823A6F2 /* FooterRefreshView.m */,
+				FFA449CFFD4E15F480560C994E5C573F /* HeaderRefreshView.h */,
+				D99A781661B94744ED814812B2F3665C /* HeaderRefreshView.m */,
+				60EBBAABD6DA032084A13446BB808C45 /* InfiniteRefreshView.h */,
+				59A6952EA8CE2A5112ABBD60EBC1941C /* InfiniteRefreshView.m */,
+				C0CBA70804BCA8644771C6715138B163 /* LGBRefresh.h */,
+				56669EBEF4E158B0597BEBA50E6696E7 /* LGBRefreshManager.h */,
+				8BBAEC4662AFD6133420D029C2FB9505 /* LGBRefreshManager.m */,
+				5B4508B149A4AB88AA6A3A50B0AFA83D /* UIScrollView+lgb_refresh.h */,
+				B774F8E0ECDC410D21C7D608BE4BEF5F /* UIScrollView+lgb_refresh.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FA3304578AE2A9CFF5CE024D3093EBDC /* Pods-LGBRefresh_Example */ = {
+			isa = PBXGroup;
+			children = (
+				503E0980FF4A1AB1DF5780E55648CC99 /* Info.plist */,
+				BBDEF54952E2C446CBFDF25D97A91448 /* Pods-LGBRefresh_Example.modulemap */,
+				F0524046DE5883E76E2E204D37D9B775 /* Pods-LGBRefresh_Example-acknowledgements.markdown */,
+				7A6FF0D108E16C9226CD6602865BD27F /* Pods-LGBRefresh_Example-acknowledgements.plist */,
+				EA9D546D03B50F44C99925765BB53639 /* Pods-LGBRefresh_Example-dummy.m */,
+				39272C2BC574F9F0A9742519AC881935 /* Pods-LGBRefresh_Example-frameworks.sh */,
+				3140E672433A24F8DB99302405FF2E03 /* Pods-LGBRefresh_Example-resources.sh */,
+				C5A4C094BD9E6566488A2FFDB63D52F9 /* Pods-LGBRefresh_Example-umbrella.h */,
+				98A68343C3F9087D7219743817DC062E /* Pods-LGBRefresh_Example.debug.xcconfig */,
+				DCADB71E3286314AB3BD76F0F0BF7A55 /* Pods-LGBRefresh_Example.release.xcconfig */,
+			);
+			name = "Pods-LGBRefresh_Example";
+			path = "Target Support Files/Pods-LGBRefresh_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		417B09F6E5316AC2589FB2D13C7E666C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818E41ACC33E477237D6A6CBCE9AB8F1 /* Pods-LGBRefresh_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5916F1DCCD1421344874E75A667CA885 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D696DC16FA8C626531B914B96E198624 /* Pods-LGBRefresh_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E83FDD77310EC31D945A2274F837CF36 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A31A0BE1F993D788A146EA5CE1CD607E /* FooterRefreshView.h in Headers */,
+				F8A5DAF7B77900A3AB4058F25B5ADC03 /* HeaderRefreshView.h in Headers */,
+				F346B6C1D751EC884068661B66AD006D /* InfiniteRefreshView.h in Headers */,
+				FA8EEC32B654BA4DA2524EFE0F96B6C6 /* LGBRefresh-umbrella.h in Headers */,
+				572CF4951E3327348AAAF5F07F8BBF10 /* LGBRefresh.h in Headers */,
+				A9266BED997430A9E8D4E9FA50F02879 /* LGBRefreshManager.h in Headers */,
+				B3A71EC25AF887A97A444A15DD23A28D /* UIScrollView+lgb_refresh.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3489778BCFD8853A3E6D1C2DD17F638A /* LGBRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FACC5C04AB8D9D3D76E10C39456382F /* Build configuration list for PBXNativeTarget "LGBRefresh" */;
+			buildPhases = (
+				C5181DE168B9E0464392DBB4F38056FA /* Sources */,
+				808F1D245CE264526BF9DDB5769DEB19 /* Frameworks */,
+				60065AC58B7390C0BD657DC2BBEFF69B /* Resources */,
+				E83FDD77310EC31D945A2274F837CF36 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1232105596D22A35D4B387EE040EAF8D /* PBXTargetDependency */,
+			);
+			name = LGBRefresh;
+			productName = LGBRefresh;
+			productReference = 622003A7578548D0664E7C3F830EAEBF /* LGBRefresh.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6ACE2FA531FFE55C8B71341AD5B253F5 /* Pods-LGBRefresh_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D212303B689D2BD324817B481A0263A /* Build configuration list for PBXNativeTarget "Pods-LGBRefresh_Tests" */;
+			buildPhases = (
+				AA6C9ED5F009F4CD70A7927876531CEA /* Sources */,
+				8F1B1E83CD5FCE76935F6A6261276E0B /* Frameworks */,
+				417B09F6E5316AC2589FB2D13C7E666C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82197664CF0B0C9C67E472EA5AA3E795 /* PBXTargetDependency */,
+			);
+			name = "Pods-LGBRefresh_Tests";
+			productName = "Pods-LGBRefresh_Tests";
+			productReference = 01728BD97DF4DBC64A1019A80F26AEDF /* Pods_LGBRefresh_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA90B437B655D4AE3901CB01BBA14C89 /* Pods-LGBRefresh_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA06FC78DAB6DFD7817E41415ADF1343 /* Build configuration list for PBXNativeTarget "Pods-LGBRefresh_Example" */;
+			buildPhases = (
+				30B3850C32F3A8B145CC5EA8A5996A0A /* Sources */,
+				AA8DF54FA5F02B1DF62E885AAADFEE6A /* Frameworks */,
+				5916F1DCCD1421344874E75A667CA885 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96B2B7B0104004A251FE7C7C5CAB748A /* PBXTargetDependency */,
+			);
+			name = "Pods-LGBRefresh_Example";
+			productName = "Pods-LGBRefresh_Example";
+			productReference = 358FCCDD296E0A50CB58D3D6AF1685FA /* Pods_LGBRefresh_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DF587B611BE8C3B2220CDF2D66F8AA85 /* LGBRefresh-LGBRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34E838E9581A765EE632BAE48D3F7F90 /* Build configuration list for PBXNativeTarget "LGBRefresh-LGBRefresh" */;
+			buildPhases = (
+				C978D946344DAAEDEBA73F497B336A35 /* Sources */,
+				7E913A5A87AE2C6609FC88DF971E2887 /* Frameworks */,
+				BE6E8CB01F19AFDE77D35E2D59D7BED5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LGBRefresh-LGBRefresh";
+			productName = "LGBRefresh-LGBRefresh";
+			productReference = 82C0331F8617DFB56010A9E393892510 /* LGBRefresh.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 14200C65DA4A6400F85FAF9CB2AAC9F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3489778BCFD8853A3E6D1C2DD17F638A /* LGBRefresh */,
+				DF587B611BE8C3B2220CDF2D66F8AA85 /* LGBRefresh-LGBRefresh */,
+				BA90B437B655D4AE3901CB01BBA14C89 /* Pods-LGBRefresh_Example */,
+				6ACE2FA531FFE55C8B71341AD5B253F5 /* Pods-LGBRefresh_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60065AC58B7390C0BD657DC2BBEFF69B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87C03A1DF20BCE4826861B8E24BDFD5C /* LGBRefresh.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE6E8CB01F19AFDE77D35E2D59D7BED5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE66DDA8677982EA31A58D18675E398F /* arrow@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30B3850C32F3A8B145CC5EA8A5996A0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B501833C372DED332B95CF79C70999EC /* Pods-LGBRefresh_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA6C9ED5F009F4CD70A7927876531CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA9C2729952B3B5F9BB511DB42E4EF64 /* Pods-LGBRefresh_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5181DE168B9E0464392DBB4F38056FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				428E44A9B78FAB21DEBDE41B00F9C253 /* FooterRefreshView.m in Sources */,
+				EBC9DB474CC811B776B868D26AD0F4A9 /* HeaderRefreshView.m in Sources */,
+				B27F5DF7DD85028D798D20AC3469FDEA /* InfiniteRefreshView.m in Sources */,
+				00C4B75F0C26DBBE3FFB18FA650CD2D3 /* LGBRefresh-dummy.m in Sources */,
+				90B3A479B57C4F92658581734F92BACF /* LGBRefreshManager.m in Sources */,
+				6D0D5014605EB125541CE5CD706712FD /* UIScrollView+lgb_refresh.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C978D946344DAAEDEBA73F497B336A35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1232105596D22A35D4B387EE040EAF8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LGBRefresh-LGBRefresh";
+			target = DF587B611BE8C3B2220CDF2D66F8AA85 /* LGBRefresh-LGBRefresh */;
+			targetProxy = BFC30CD92AB6839D8A19518E61507236 /* PBXContainerItemProxy */;
+		};
+		82197664CF0B0C9C67E472EA5AA3E795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LGBRefresh;
+			target = 3489778BCFD8853A3E6D1C2DD17F638A /* LGBRefresh */;
+			targetProxy = EF1DADB291E227B9AA380AB786428A75 /* PBXContainerItemProxy */;
+		};
+		96B2B7B0104004A251FE7C7C5CAB748A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LGBRefresh;
+			target = 3489778BCFD8853A3E6D1C2DD17F638A /* LGBRefresh */;
+			targetProxy = EFA45081AF3C43E9604792D2EF798E1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2DBBF32F3E8255765B78F092CA610533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC7839B5468737A2AB38C50BEDD4D0F7 /* Pods-LGBRefresh_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LGBRefresh_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LGBRefresh_Tests/Pods-LGBRefresh_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LGBRefresh_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4316439E752333648DBCE883870B39F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCADB71E3286314AB3BD76F0F0BF7A55 /* Pods-LGBRefresh_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LGBRefresh_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LGBRefresh_Example/Pods-LGBRefresh_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LGBRefresh_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59A56DC64B8285024B60C5F6A241F57E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2983D5F5518D6493C23363AAE3272DEA /* LGBRefresh.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LGBRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6569F07DC21AD8B72752685013E3D9D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6A719A181FC62ED521BD0C1E0B40199B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2983D5F5518D6493C23363AAE3272DEA /* LGBRefresh.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LGBRefresh/LGBRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LGBRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LGBRefresh/LGBRefresh.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LGBRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79D20637319EC141F2F8085CAF1CF47D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2983D5F5518D6493C23363AAE3272DEA /* LGBRefresh.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LGBRefresh/LGBRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LGBRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LGBRefresh/LGBRefresh.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LGBRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		932DB7482EE926EABDCA50C307440DA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A68343C3F9087D7219743817DC062E /* Pods-LGBRefresh_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LGBRefresh_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LGBRefresh_Example/Pods-LGBRefresh_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LGBRefresh_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A14E2444F162A20E3776820E0ADFFB52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8741F094EE16C7DAD7AC8A4A6E1EECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2983D5F5518D6493C23363AAE3272DEA /* LGBRefresh.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LGBRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		E3769ED6365F2046FD943C83BB36CF5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9642482096CB38AD046E99C2E5ECC3D9 /* Pods-LGBRefresh_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LGBRefresh_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LGBRefresh_Tests/Pods-LGBRefresh_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LGBRefresh_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6569F07DC21AD8B72752685013E3D9D8 /* Debug */,
+				A14E2444F162A20E3776820E0ADFFB52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34E838E9581A765EE632BAE48D3F7F90 /* Build configuration list for PBXNativeTarget "LGBRefresh-LGBRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59A56DC64B8285024B60C5F6A241F57E /* Debug */,
+				A8741F094EE16C7DAD7AC8A4A6E1EECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D212303B689D2BD324817B481A0263A /* Build configuration list for PBXNativeTarget "Pods-LGBRefresh_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBBF32F3E8255765B78F092CA610533 /* Debug */,
+				E3769ED6365F2046FD943C83BB36CF5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FACC5C04AB8D9D3D76E10C39456382F /* Build configuration list for PBXNativeTarget "LGBRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A719A181FC62ED521BD0C1E0B40199B /* Debug */,
+				79D20637319EC141F2F8085CAF1CF47D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA06FC78DAB6DFD7817E41415ADF1343 /* Build configuration list for PBXNativeTarget "Pods-LGBRefresh_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				932DB7482EE926EABDCA50C307440DA1 /* Debug */,
+				4316439E752333648DBCE883870B39F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
